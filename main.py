@@ -12,6 +12,7 @@ Bot = cd.Bot(command_prefix="")
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
+    print(message.content)
     for word in keywords:
         if word in message.content:
             await Bot.send_message(message.channel, whench)
