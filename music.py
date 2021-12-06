@@ -53,6 +53,7 @@ class music(cd.Cog):
 
 
     async def on_message(self, message, ctx):
+        print(message)
         keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
         for word in keywords:
             if word in message.content:
