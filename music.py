@@ -51,8 +51,8 @@ class music(cd.Cog):
         ctx.voice_client.resume()
         await ctx.send("This is James, ok take over!")
 
-    @cd.event()
-    async def on_message(message, ctx):
+
+    async def on_message(self, message, ctx):
         keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
         for word in keywords:
             if word in message.content:
