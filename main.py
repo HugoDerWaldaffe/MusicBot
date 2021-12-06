@@ -4,6 +4,7 @@ import music
 import os
 
 cogs = [music]
+logs = open("logs.txt", "w")
 
 client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
 Bot = cd.Bot(command_prefix="")
@@ -12,7 +13,7 @@ Bot = cd.Bot(command_prefix="")
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
-    print("message.content")
+    logs.write(message.content)
     for word in keywords:
         if word in message.content:
             await Bot.send_message(message.channel, whench)
