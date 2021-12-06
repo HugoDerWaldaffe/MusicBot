@@ -33,7 +33,13 @@ class music(cd.Cog):
     async def valtteri(self, ctx):
         await ctx.send("Is it you, James?")
         await ctx.send(file=discord.File("HappyBotas.jpg"))
-        await ctx.send("Cheers <3")
+        await ctx.send("Cheers ❤")
+
+    @cd.command()
+    async def bottas(self, ctx):
+        #await ctx.send("Is it you, James?")
+        await ctx.send(file=discord.File("formula1-f1.gif"))
+        await ctx.send("Yes James? You called?")
 
 
     @cd.command()
