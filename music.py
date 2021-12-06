@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands as cd
 import youtube_dl as yt
+import ffmpeg
 
 class music(cd.Cog):
     def __init__(self, client):
