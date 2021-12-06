@@ -29,9 +29,10 @@ class music(cd.Cog):
             vc.play(source)
 
     @cd.command()
-    async def valteri(self, ctx):
+    async def valtteri(self, ctx):
         await ctx.send("Is it you, James?")
         await ctx.send(file=discord.File("HappyBotas.jpg"))
+        await ctx.send("Cheers <3")
 
 
     @cd.command()
