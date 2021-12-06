@@ -13,10 +13,10 @@ Bot = cd.Bot(command_prefix="", intents=discord.Intents.all())
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
-    logs.write(message.content)
+    print("here")
     for word in keywords:
         if word in message.content:
-            await Bot.send_message(message.channel, whench)
+            await message.channel.send(whench)
 
 for i in range(len(cogs)):
     cogs[i].setup(client)
