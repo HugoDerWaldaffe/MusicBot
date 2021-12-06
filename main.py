@@ -15,10 +15,13 @@ async def on_message(message):
         return
     keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni", "horny", "<3"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
+    happy = "I just want to be happy! :("
     for word in keywords:
         if word in message.content:
             await message.channel.send(whench)
             await message.channel.send(file=discord.File("AngryBottas.jpg"))
+            await message.channel.send(file=discord.File("SadBottas.jpg"))
+            await message.channel.send(happy)
     await client.process_commands(message)
 
 for i in range(len(cogs)):
