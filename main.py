@@ -8,7 +8,7 @@ cogs = [music]
 client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
 Bot = cd.Bot(command_prefix="")
 
-@Bot.event()
+@Bot.event
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
