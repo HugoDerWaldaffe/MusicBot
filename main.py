@@ -9,7 +9,7 @@ logs = open("logs.txt", "w")
 client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
 Bot = discord.Client()
 
-@client.event
+@client.listen
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
