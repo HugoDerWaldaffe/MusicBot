@@ -22,3 +22,4 @@ for i in range(len(cogs)):
     cogs[i].setup(client)
 
 client.run(os.environ["TOKEN"])
+Bot.run(os.environ["TOKEN"])
