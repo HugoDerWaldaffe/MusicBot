@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands as cd
+import time
 import music
 import os
 
@@ -20,6 +21,7 @@ async def on_message(message):
         if word in message.content:
             await message.channel.send(whench)
             await message.channel.send(file=discord.File("AngryBottas.jpg"))
+            time.sleep(2)
             await message.channel.send(file=discord.File("SadBottas.jpg"))
             await message.channel.send(happy)
     await client.process_commands(message)
