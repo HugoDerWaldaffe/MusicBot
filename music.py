@@ -30,11 +30,12 @@ class music(cd.Cog):
 
     @cd.command()
     async def valteri(self, ctx):
-        await ctx.send("To whom it may concern: Fuck you!")
+        await ctx.send("Is it you, James?")
 
     @cd.command()
     async def leave(self, ctx):
         ctx.voice_client.stop()
+        await ctx.send("To whom it may concern: Fuck you!")
         await ctx.voice_client.disconnect()
 
     @cd.command()
