@@ -9,7 +9,7 @@ logs = open("logs.txt", "w")
 client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
 Bot = discord.Client()
 
-@client.listen
+@client.event
 async def on_message(message):
     keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
@@ -17,6 +17,7 @@ async def on_message(message):
     for word in keywords:
         if word in message.content:
             await message.channel.send(whench)
+    await client.process_commands(message)
 
 for i in range(len(cogs)):
     print("cogs")
