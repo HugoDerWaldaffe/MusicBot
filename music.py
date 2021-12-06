@@ -17,7 +17,7 @@ class music(cd.Cog):
             await current_channel.connect()
         else:
             await ctx.voice_client.move_to(current_channel)
-        ctx.voice_client.stop()
+        #ctx.voice_client.stop()
         FFMPEG_OPTIONS = {"before_options": "-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5", "options" : "-vn"}
         YDL_OPTIONS = {"format" : "bestaudio", "forceip" : "0.0.0.0"}
         vc = ctx.voice_client
