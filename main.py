@@ -27,7 +27,7 @@ async def on_message(message):
             await message.channel.send(happy)
     for word in keywords2:
         if word in message.content:
-            await message.channel.send("James...Uwu? 👉👈")
+            await message.channel.send("James...Uwu? 👉 👈")
             await message.channel.send(file=discord.File("UwuBottas.jpg"))
     await client.process_commands(message)
 
