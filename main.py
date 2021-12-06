@@ -19,6 +19,7 @@ async def on_message(message):
             await message.channel.send(whench)
 
 for i in range(len(cogs)):
+    print("cogs")
     cogs[i].setup(client)
 
 #Bot.run(os.environ["TOKEN"])
