@@ -34,6 +34,7 @@ class music(cd.Cog):
 
     @cd.command()
     async def leave(self, ctx):
+        ctx.voice_client.stop()
         await ctx.voice_client.disconnect()
 
     @cd.command()
