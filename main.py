@@ -6,7 +6,7 @@ import os
 cogs = [music]
 logs = open("logs.txt", "w")
 
-client = cd.Bot(command_prefix="", intents=discord.Intents.all())
+client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
 Bot = discord.Client()
 
 @client.event
