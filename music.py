@@ -4,6 +4,7 @@ import youtube_dl as yt
 import ffmpeg
 
 class music(cd.Cog):
+
     def __init__(self, client):
         self.client = client
 
@@ -50,6 +51,8 @@ class music(cd.Cog):
     async def resume(self, ctx):
         ctx.voice_client.resume()
         await ctx.send("This is James, ok take over!")
+
+
 
 def setup(client):
     client.add_cog(music(client))

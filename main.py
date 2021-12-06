@@ -6,12 +6,12 @@ import os
 cogs = [music]
 logs = open("logs.txt", "w")
 
-client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
+client = cd.Bot(command_prefix="", intents=discord.Intents.all())
 Bot = discord.Client()
 
-@Bot.event
+@client.event
 async def on_message(message):
-    keywords = ["uwu", "cutie", "hot", "owo", ":heart:", "janni"]
+    keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
     print("here")
     for word in keywords:
@@ -21,5 +21,5 @@ async def on_message(message):
 for i in range(len(cogs)):
     cogs[i].setup(client)
 
-Bot.run(os.environ["TOKEN"])
+#Bot.run(os.environ["TOKEN"])
 client.run(os.environ["TOKEN"])
