@@ -11,16 +11,17 @@ Bot = discord.Client()
 
 @client.event
 async def on_message(message):
-    keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni"]
+    if message.author == client.user:
+        return
+    keywords = ["uwu", "cutie", "hot", "owo", "❤", "janni", "horny", "<3"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
-    print("here")
     for word in keywords:
         if word in message.content:
             await message.channel.send(whench)
+            await message.channel.send(file=discord.File("AngryBottas.jpg"))
     await client.process_commands(message)
 
 for i in range(len(cogs)):
-    print("cogs")
     cogs[i].setup(client)
 
 #Bot.run(os.environ["TOKEN"])
