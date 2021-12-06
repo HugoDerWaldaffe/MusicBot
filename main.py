@@ -7,7 +7,7 @@ cogs = [music]
 logs = open("logs.txt", "w")
 
 client = cd.Bot(command_prefix="+", intents=discord.Intents.all())
-Bot = cd.Bot(command_prefix="", intents=discord.Intents.all())
+Bot = discord.Client()
 
 @Bot.event
 async def on_message(message):
