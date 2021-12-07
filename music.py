@@ -44,6 +44,7 @@ class music(cd.Cog):
         await ctx.send(file=discord.File(fileName))
         message = fileName.replace("bottas", "")
         message = message.replace("/", "")
+        message = message.replace(".gif", "")
         await ctx.send(message)
 
 
