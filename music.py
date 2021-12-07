@@ -67,7 +67,8 @@ class music(cd.Cog):
         await ctx.send("Horny Test!")
         hornyMemes = memeList("horny")
         memeNum = random.randrange(10)
-        await ctx.send(file=discord.File(hornyMemes[memeNum]))
+        fileName = "horny/" + hornyMemes[memeNum]
+        await ctx.send(file=discord.File(fileName))
 
 
 def memeList(directory):
