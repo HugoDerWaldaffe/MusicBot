@@ -14,7 +14,7 @@ Bot = discord.Client()
 async def on_message(message):
     if message.author == client.user:
         return
-    keywords = ["cutie", "hot", "owo", "❤", "janni", "<3", "😘", "😏"]
+    keywords = ["cutie", " horny", "hot", "owo", "❤", "janni", "<3", "😘", "😏"]
     keywords2 = ["uwu", "i love you", "👉👈", "👉 👈"]
     whench = "Silence Wench! I do not wish to be horny anymore!"
     happy = "I just want to be happy! :("
