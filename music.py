@@ -1,19 +1,16 @@
+import random
+
 import discord
 from discord.ext import commands as cd
 import youtube_dl as yt
 import ffmpeg
 import os
+from random import randrange
 
 class music(cd.Cog):
-
     def __init__(self, client):
         self.client = client
-
-    def memeList(self, directory):
-        for root, dirs, files in os.walk(directory):
-            for file in files:
-                if file.endswith(".gif"):
-                    print(file)
+        self.hornyMemes = memeList("horny")
 
     @cd.command()
     async def play(self, ctx, url):
@@ -68,11 +65,18 @@ class music(cd.Cog):
     @cd.command()
     async def horny(self, ctx):
         await ctx.send("Horny Test!")
-        for root, dirs, files in os.walk("horny"):
-            for file in files:
-                if file.endswith(".gif"):
-                    print(file)
+        hornyMemes = memeList("horny")
+        memeNum = random.randrange(10)
+        await ctx.send(file=discord.File(hornyMemes[memeNum]))
 
+
+def memeList(directory):
+    memes = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".gif"):
+                memes.append(file)
+    return memes
 
 
 def setup(client):
