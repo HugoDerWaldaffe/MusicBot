@@ -58,6 +58,10 @@ class music(cd.Cog):
         ctx.voice_client.resume()
         await ctx.send("This is James, ok take over!")
 
+    @cd.command()
+    async def horny(self, ctx):
+        await ctx.send("Horny Test!")
+
 
 
 def setup(client):
