@@ -40,9 +40,11 @@ class music(cd.Cog):
 
     @cd.command()
     async def bottas(self, ctx):
-        #await ctx.send("Is it you, James?")
-        await ctx.send(file=discord.File("formula1-f1.gif"))
-        await ctx.send("Yes James? You called?")
+        fileName = generateMeme("bottas")
+        await ctx.send(file=discord.File(fileName))
+        message = fileName.replace("bottas", "")
+        message = message.replace("/", "")
+        await ctx.send(message)
 
 
     @cd.command()
