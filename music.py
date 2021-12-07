@@ -68,6 +68,10 @@ class music(cd.Cog):
     @cd.command()
     async def horny(self, ctx):
         await ctx.send("Horny Test!")
+        for root, dirs, files in os.walk("horny"):
+            for file in files:
+                if file.endswith(".gif"):
+                    print(file)
 
 
 
