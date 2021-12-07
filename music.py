@@ -10,7 +10,6 @@ from random import randrange
 class music(cd.Cog):
     def __init__(self, client):
         self.client = client
-        self.hornyMemes = memeList("horny")
 
     @cd.command()
     async def play(self, ctx, url):
@@ -64,19 +63,19 @@ class music(cd.Cog):
 
     @cd.command()
     async def horny(self, ctx):
-        hornyMemes = memeList("horny")
-        memeNum = random.randrange(9)
-        fileName = "horny/" + hornyMemes[memeNum]
+        fileName = generateMeme("horny")
         await ctx.send(file=discord.File(fileName))
 
 
-def memeList(directory):
+def generateMeme(directory):
     memes = []
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.endswith(".gif"):
                 memes.append(file)
-    return memes
+    memeNum = random.randrange(len(memes)-1)
+    fileName = directory + "/" + memes[memeNum]
+    return fileName
 
 
 def setup(client):
