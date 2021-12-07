@@ -2,11 +2,18 @@ import discord
 from discord.ext import commands as cd
 import youtube_dl as yt
 import ffmpeg
+import os
 
 class music(cd.Cog):
 
     def __init__(self, client):
         self.client = client
+
+    def memeList(self, directory):
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file.endswith(".gif"):
+                    print(file)
 
     @cd.command()
     async def play(self, ctx, url):
