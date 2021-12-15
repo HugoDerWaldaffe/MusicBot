@@ -77,7 +77,7 @@ def generateMeme(directory):
             if file.endswith(".gif"):
                 memes.append(file)
     memeNum = random.randrange(len(memes)-1)
-    fileName = directory + "/" + memes[memeNum]
+    fileName = directory + "/" + "günther.gif"
     return fileName
 
 
