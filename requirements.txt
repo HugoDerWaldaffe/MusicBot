@@ -1,4 +1,4 @@
 PyNaCl
 discord
-youtube-dl == v2021.06.06
+youtube-dl == v2021.12.17
 ffmpeg
